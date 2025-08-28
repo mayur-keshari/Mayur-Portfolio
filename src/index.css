@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base{
+    .nav-item {
+        @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
+    }
+    .container{
+        @apply w-full mx-auto px-3
+    }
+
+    .hero-ring{
+        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+    }
+}
+
+*{
+    font-family: "Inter", sans-serif;
+
+}
+
+@layer utilities{
+    .container{
+        @apply lg:max-w-5xl;
+    }
+}
+
+@layer components {
+    .ping-scale{
+        animation:scale 1s ease-in-out infinite;
+    }
+}
+
+@keyframes scale{
+    0%{
+        opacity: 1;
+        transform:scale(100%);
+    }
+     100%{
+        opacity: 0;
+        transform:scale(250%);
+    }
+}
+
+@layer components {
+    .shake-hand{
+        animation:shake 1s  infinite;
+    }
+}
+
+@keyframes shake{
+    0%{
+        transform:rotate(360deg);
+    }
+     50%{
+        transform:rotate(330deg)
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}
+
+@layer components {
+    .move-left-tape{
+        animation:movelefttape 15s linear infinite;
+    }
+}
+
+@keyframes movelefttape{
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform:translateX(-50%)
+    }
+}
+
+@layer components {
+    .move-left{
+        animation:moveleft 50s linear infinite;
+    }
+}
+
+@keyframes moveleft{
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform:translateX(-300%)
+    }
+}
+
+@layer components {
+    .move-right{
+        animation:moveright 45s linear infinite;
+    }
+}
+
+@keyframes moveright{
+    0%{
+        transform:translateX(-300%);
+    }
+    100%{
+        transform:translateX(0%)
+    }
+}
