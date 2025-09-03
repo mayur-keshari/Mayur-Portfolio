@@ -41,7 +41,7 @@ const ContactCard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/api/query",{name,email,Contact,Message});
+      const res = await axios.post("https://mayur-portfolio-backend.onrender.com/api/query",{name,email,Contact,Message});
       if(res.data.success){
         setname("");
         setemail("");
