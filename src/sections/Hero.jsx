@@ -4,10 +4,11 @@ import grain_bg from '../assets/Images/grain_background.jpg'
 import { PiStarFourFill } from 'react-icons/pi'
 import HeroOrbit from '../components/HeroOrbit'
 import { FaCircle } from 'react-icons/fa6'
+import {ReactTyped} from "react-typed"
 
 const Hero = () => {
   return (
-    <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
+    <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip' id="Home">
       <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
         <div className='absolute inset-0 -z-30 opacity-5' style={{ backgroundImage: `url(${grain_bg})` }}></div>
         <div className='size-[620px] hero-ring'></div>
@@ -57,7 +58,20 @@ const Hero = () => {
           </div>
         </div>
         <div className='max-w-lg mx-auto'>
-          <h1 className='text-3xl text-center mt-8 tracking-wide md:text-5xl' style={{ fontFamily: "'Calistoga', serif" }}>Building Exceptional User Experiences</h1>
+          <h2 className='sm:text-3xl text-center mt-8 tracking-wide md:text-[2.5rem] text-2xl
+          bg-emerald-300 text-transparent bg-clip-text'
+           style={{ fontFamily: "'Calistoga', serif" }}>
+            <span className='md:text-3xl sm:text-xl text-lg text-gray-300 mr-2 font-semibold'>Hi, I'm</span>Mayur</h2>
+            <div className='flex justify-center items-center'>
+              <ReactTyped
+            strings={["MERN Stack Developer","Frontend Developer"]}
+            typeSpeed={100}
+            loop
+            backSpeed={50}
+            cursorChar='|'
+            showCursor={true}
+            className='md:text-[2.76rem] sm:text-3xl text-[1.6rem] font-bold tracking-wide bg-gradient-to-r from-emerald-300 to-emerald-400 text-transparent bg-clip-text mt-4'/>
+            </div>
           <p className='mt-4 text-center text-white/60 md:text-lg'>I specialized in transforming designs into  functional, high-performing
             web applications. Let's discuss your next project.
           </p>

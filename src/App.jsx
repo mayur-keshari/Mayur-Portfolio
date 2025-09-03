@@ -12,15 +12,6 @@ import { useState } from 'react'
 
 function App() {
 
-    const [displaycard, setdisplaycard] = useState(false)
-     
-    function toggledisplay (){
-      setdisplaycard(!displaycard)
-    }
-  
-   console.log(displaycard)
-  
-
   return (
     <>
      <div className='bg-gray-900 text-white overflow-hidden'>
@@ -29,9 +20,9 @@ function App() {
       <Projects/>
       <Tape/>
       <About/>
-      <Contact toggledisplay={toggledisplay}/>
+      <Contact/>
+      <ContactCard/>
       <Footer/>
-      <ContactCard displaycard={displaycard} toggledisplay={toggledisplay}/>
      </div>
     </>
   )
